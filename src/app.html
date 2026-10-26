@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- 文字コードの宣言は、ブラウザが早く読めるように head の一番最初に置く -->
+    <meta charset="utf-8" />
+    <!--
+		  src/app.html
+		  すべてのページの土台になる HTML
+		  - html の lang="ja"：日本語のページであることをブラウザと検索エンジンに伝える
+		  - viewport：スマホの画面幅に合わせて表示する
+		  - head の最後と body の中に、SvelteKit がページの中身を差し込む
+		  （注意：差し込み場所の目印の文字はコメントの中に書かないこと。
+		    コメントの中に書くと、そこに中身が差し込まれてしまう）
+		-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
